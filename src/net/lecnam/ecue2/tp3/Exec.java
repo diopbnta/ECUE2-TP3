@@ -27,6 +27,13 @@ public class Exec  {
         System.out.println(p1);
         System.out.println(p1.equals(p2));
 
+        // rectangle avec le constructeur 1
+        Point origine = new Point(2, 3);
+        Rectangle r1 = new Rectangle(10, 5,origine);
+
+        // rectangle avec le constructeur 2
+        Rectangle r2 = new Rectangle(2, 3, 10, 5);
+
 
     }
 

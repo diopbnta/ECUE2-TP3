@@ -8,14 +8,18 @@ public class Rectangle {
     private double longueur;
     private double largeur;
     private Point origine;
-    private double coord1;
-    private double coord2;
 
     // constructeur
     public Rectangle(double longueur, double largeur, Point origine) {
         this.longueur = longueur;
         this.largeur = largeur;
         this.origine = origine;
+    }
+    // constructeur 2
+    public Rectangle(double x, double y, double longueur, double largeur) {
+        this.origine = new Point(x, y);
+        this.longueur = longueur;
+        this.largeur = largeur;
     }
 
 
