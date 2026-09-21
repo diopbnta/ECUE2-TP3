@@ -11,6 +11,8 @@ public class Exec  {
         Point p1 = new Point(0, 0);
         Point p2 = new Point(3, 4);
 
+        Dessin dessin = new Dessin();
+
         System.out.println(p1);
         System.out.println(p2);
 
@@ -34,9 +36,11 @@ public class Exec  {
         // rectangle avec le constructeur 2
         Rectangle r2 = new Rectangle(2, 3, 10, 5);
 
-        double surface = r1.RetournSurface(10, 5);
+        // je l'ai mis en commentaire pour povoir utiliser la fonction ReturnSurface()
+        // Sur l'exo 9, sinon en entrée ça va demandr les double de longueur et largeur
+        //double surface = r1.RetournSurface(10, 5);
 
-        System.out.println("Surface : " + surface);
+        //System.out.println("Surface : " + surface);
         Point p4 = new Point(2,3);
         p4.translate(1,1);
         System.out.println(p4);
@@ -51,6 +55,14 @@ public class Exec  {
 
         System.out.println(r1.equals(r2));
 
+        dessin.ajout(r1);
+        dessin.ajout(r2);
+
+        System.out.println("Surface totale : " + dessin.retourneSurface());
+
+
+        dessin.translate(3, 2);
+        System.out.println(origine);
     }
 
 }

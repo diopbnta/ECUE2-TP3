@@ -13,5 +13,23 @@ public class Dessin {
         rectangles[nombreRectangles] = rectangle;
         nombreRectangles++;
     }
+
+    public double retourneSurface() {
+        double surfaceTotale = 0;
+
+        for (int i = 0; i < nombreRectangles; i++) {
+            surfaceTotale += rectangles[i].RetournSurface();
+        }
+
+        return surfaceTotale;
+    }
+
+    public void translate(double x, double y) {
+        for (int i = 0; i < nombreRectangles; i++) {
+            rectangles[i].translate(x, y);
+        }
+    }
+
+
 }
 

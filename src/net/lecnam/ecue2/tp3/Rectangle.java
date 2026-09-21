@@ -25,14 +25,21 @@ public class Rectangle {
         this.largeur = largeur;
     }
 
-    public double RetournSurface(double longueur, double largeur){
+    public double RetournSurface(){
         return this.longueur * this.largeur;
     }
 
-    public  void translate(double x, double y ){
-        this.x += x;
-        this.y += y;
+    //public  void translate(double x, double y ){
+        //this.x += x;
+        //this.y += y;
+    //}
+    public void translate(double x, double y) {
+        origine.translate(x, y);
     }
+
+
+
+
 
     public boolean contient(Point p) {
         return p.getX() >= origine.getX()
