@@ -34,7 +34,12 @@ public class Exec  {
         // rectangle avec le constructeur 2
         Rectangle r2 = new Rectangle(2, 3, 10, 5);
 
+        double surface = r1.RetournSurface(10, 5);
 
+        System.out.println("Surface : " + surface);
+        Point p4 = new Point(2,3);
+        p4.translate(1,1);
+        System.out.println(p4);
     }
 
 }

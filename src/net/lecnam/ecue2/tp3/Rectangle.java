@@ -8,6 +8,8 @@ public class Rectangle {
     private double longueur;
     private double largeur;
     private Point origine;
+    private double x;
+    private  double y ;
 
     // constructeur
     public Rectangle(double longueur, double largeur, Point origine) {
@@ -21,6 +23,17 @@ public class Rectangle {
         this.longueur = longueur;
         this.largeur = largeur;
     }
+
+    public double RetournSurface(double longueur, double largeur){
+        return this.longueur * this.largeur;
+    }
+
+    public  void translate(double x, double y ){
+        this.x += x;
+        this.y += y;
+    }
+
+
 
 
 
