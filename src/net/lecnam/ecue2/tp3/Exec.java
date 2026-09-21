@@ -63,6 +63,10 @@ public class Exec  {
 
         dessin.translate(3, 2);
         System.out.println(origine);
+
+
+        Rectangle r = dessin.retournePlusGrandRectangle();
+        System.out.println("Plus grand rectangle : " + r);
     }
 
 }

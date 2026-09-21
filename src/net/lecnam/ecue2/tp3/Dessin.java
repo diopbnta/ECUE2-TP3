@@ -1,8 +1,14 @@
 package net.lecnam.ecue2.tp3;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Dessin {
     private Rectangle[] rectangles;
     private int nombreRectangles;
+
+
+
 
     public Dessin(){
         rectangles = new Rectangle[10];
@@ -28,6 +34,18 @@ public class Dessin {
         for (int i = 0; i < nombreRectangles; i++) {
             rectangles[i].translate(x, y);
         }
+    }
+
+    public Rectangle retournePlusGrandRectangle() {
+        Rectangle plusGrand = rectangles[0];
+
+        for (int i = 1; i < nombreRectangles; i++) {
+            if (rectangles[i].RetournSurface() > plusGrand.RetournSurface()) {
+                plusGrand = rectangles[i];
+            }
+        }
+
+        return plusGrand;
     }
 
 
