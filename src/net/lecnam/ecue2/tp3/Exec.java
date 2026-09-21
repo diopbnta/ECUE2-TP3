@@ -3,70 +3,36 @@ package net.lecnam.ecue2.tp3;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Exec  {
+
+public class Exec {
 
     public static void main(String[] args) {
 
-
-        Point p1 = new Point(0, 0);
-        Point p2 = new Point(3, 4);
-
+        // 1. Instancier un objet Dessin
         Dessin dessin = new Dessin();
 
-        System.out.println(p1);
-        System.out.println(p2);
+        // 2. Créer plusieurs rectangles
+        Rectangle r1 = new Rectangle(0, 0, 10, 5);
+        Rectangle r2 = new Rectangle(2, 3, 4, 8);
+        Rectangle r3 = new Rectangle(5, 5, 6, 6);
 
-        Point p = new Point(2, 3);
-        p.translate(3,3);
-        System.out.println(p);
-
-        System.out.println(p1.equals(p2));
-
-        System.out.println("Distance : " + p1.retourneDistance(p2));
-
-        p1.translate(3, 4);
-
-        System.out.println(p1);
-        System.out.println(p1.equals(p2));
-
-        // rectangle avec le constructeur 1
-        Point origine = new Point(2, 3);
-        Rectangle r1 = new Rectangle(10, 5,origine);
-
-        // rectangle avec le constructeur 2
-        Rectangle r2 = new Rectangle(2, 3, 10, 5);
-
-        // je l'ai mis en commentaire pour povoir utiliser la fonction ReturnSurface()
-        // Sur l'exo 9, sinon en entrée ça va demandr les double de longueur et largeur
-        //double surface = r1.RetournSurface(10, 5);
-
-        //System.out.println("Surface : " + surface);
-        Point p4 = new Point(2,3);
-        p4.translate(1,1);
-        System.out.println(p4);
-
-        Rectangle r3 = new Rectangle(2, 3, 10, 5);
-
-        Point p5 = new Point(5, 4);
-        Point p6 = new Point(20, 10);
-
-        System.out.println(r1.contient(p5));
-        System.out.println(r1.contient(p6));
-
-        System.out.println(r1.equals(r2));
-
+        // 3. Ajouter les rectangles au dessin
         dessin.ajout(r1);
         dessin.ajout(r2);
+        dessin.ajout(r3);
 
+        // 4. Afficher la surface totale
         System.out.println("Surface totale : " + dessin.retourneSurface());
 
+        // 5. Afficher les informations du plus grand rectangle
+        System.out.println("Plus grand rectangle : "
+                + dessin.retournePlusGrandRectangle());
 
-        dessin.translate(3, 2);
-        System.out.println(origine);
+        // 6. Déplacer tous les rectangles
+        dessin.translate(10, 5);
 
-
-        Rectangle r = dessin.retournePlusGrandRectangle();
-        System.out.println("Plus grand rectangle : " + r);
+        // 7. Afficher à nouveau le plus grand rectangle
+        System.out.println("Après déplacement : "
+                + dessin.retournePlusGrandRectangle());
     }
-
 }
