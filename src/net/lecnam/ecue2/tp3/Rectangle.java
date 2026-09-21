@@ -41,6 +41,23 @@ public class Rectangle {
                 && p.getY() <= origine.getY() + largeur;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!(obj instanceof Rectangle)) {
+            return false;
+        }
+
+        Rectangle r = (Rectangle) obj;
+
+        return this.origine.equals(r.origine)
+                && this.longueur == r.longueur
+                && this.largeur == r.largeur;
+    }
+
 
 
 

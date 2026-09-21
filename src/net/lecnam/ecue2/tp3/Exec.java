@@ -49,6 +49,8 @@ public class Exec  {
         System.out.println(r1.contient(p5));
         System.out.println(r1.contient(p6));
 
+        System.out.println(r1.equals(r2));
+
     }
 
 }
