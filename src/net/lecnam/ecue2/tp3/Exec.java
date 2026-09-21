@@ -40,6 +40,15 @@ public class Exec  {
         Point p4 = new Point(2,3);
         p4.translate(1,1);
         System.out.println(p4);
+
+        Rectangle r3 = new Rectangle(2, 3, 10, 5);
+
+        Point p5 = new Point(5, 4);
+        Point p6 = new Point(20, 10);
+
+        System.out.println(r1.contient(p5));
+        System.out.println(r1.contient(p6));
+
     }
 
 }

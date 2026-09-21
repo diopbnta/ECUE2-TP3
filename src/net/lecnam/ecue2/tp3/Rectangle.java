@@ -11,6 +11,7 @@ public class Rectangle {
     private double x;
     private  double y ;
 
+
     // constructeur
     public Rectangle(double longueur, double largeur, Point origine) {
         this.longueur = longueur;
@@ -31,6 +32,13 @@ public class Rectangle {
     public  void translate(double x, double y ){
         this.x += x;
         this.y += y;
+    }
+
+    public boolean contient(Point p) {
+        return p.getX() >= origine.getX()
+                && p.getX() <= origine.getX() + longueur
+                && p.getY() >= origine.getY()
+                && p.getY() <= origine.getY() + largeur;
     }
 
 
